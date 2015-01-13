@@ -14,6 +14,7 @@ class DefaultController extends Controller
 
     public function ayudaAction($tema)
     {
-        return new Response("<html><body>Esta es la ayuda sobre el tema ".$tema."</body></html>");
+        //return new Response("<html><body>Esta es la ayuda sobre el tema ".$tema."</body></html>");
+        return $this->render('CursoMainBundle:Default:ayuda.html.twig',array('tema' => $tema));
     }
 }
