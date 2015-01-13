@@ -7,5 +7,5 @@ curso_main_help:
     defaults: { _controller: CursoMainBundle:Default:ayuda }
 
 curso_main_info:
-    path:     /nosotros
-    defaults: { _controller: CursoMainBundle:Info:nosotros }
+    path:     /nosotros/{nombre}/{apellido}/{nacimiento}
+    defaults: { _controller: CursoMainBundle:Info:nosotros, nombre:Yuliem, apellido:Alavez, nacimiento:ES }

@@ -7,9 +7,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 class InfoController extends Controller
 {
-    public function nosotrosAction()
+    public function nosotrosAction($nombre, $nacimiento, $apellido)
     {
-        return new Response("<html><body>Mi página de información propia</body></html>");
+        return new Response("<html><body>Hola página de ".$nombre." ".$apellido."</body></html>");
         //return $this->render('CursoMainBundle:Default:ayuda.html.twig',array('tema' => $tema));
     }
 }
