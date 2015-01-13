@@ -6,3 +6,6 @@ curso_main_help:
     path:     /ayuda/{tema}
     defaults: { _controller: CursoMainBundle:Default:ayuda }
 
+curso_main_info:
+    path:     /nosotros
+    defaults: { _controller: CursoMainBundle:Info:nosotros }
