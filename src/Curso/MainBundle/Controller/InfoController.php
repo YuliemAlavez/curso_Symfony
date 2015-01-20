@@ -13,7 +13,30 @@ class InfoController extends Controller
         //return $this->render('CursoMainBundle:Default:ayuda.html.twig',array('tema' => $tema));
     }
     public function pagina_estaticaAction($pagina){
-    	return $this->render('CursoMainBundle:Default:'.$pagina.'.html.twig',array());
+    	/*
+    	$response = $this->forward("CursoMainBundle:Info:nosotros",array(
+    		"nombre" => "Cesar",
+    		"apellido" => "Cejudo",
+    		"nacimiento" => "Mex"
+    		));
+    	return $response;
+    	*/
+
+    	if($pagina == "quienes_somos"){
+
+    		
+    		return $this->redirect($this->generateUrl('curso_main_info',array('slug'=>$pagina)));
+    		return $this->redirect("http://www.google.com");
+    		return new Response("<html><body>Esta es la página de quienes somos</body></html>");
+    	}
+    	if($pagina == "quien" || $pagina == "donde"){
+    		return $this->render('CursoMainBundle:Default:'.$pagina.'.html.twig',array());
+    	}
+    	
+    	else{
+    		throw $this->createNotFoundException("Página no encontrada");
+    		
+    	}
 
     	
     }
