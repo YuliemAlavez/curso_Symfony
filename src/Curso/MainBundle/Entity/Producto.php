@@ -2,7 +2,7 @@
 
 namespace Curso\MainBundle\Entity;
 
-use Doctrine\ORM\Mapping aS ORM;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
 *
