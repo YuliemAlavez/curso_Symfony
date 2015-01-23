@@ -1,8 +1,8 @@
 <?php
 
-namespac Curso\MainBundle\Entity;
+namespace Curso\MainBundle\Entity;
 
-use Doctrine\ORM\Mapping ar ORM;
+use Doctrine\ORM\Mapping aS ORM;
 
 /**
 *
@@ -12,18 +12,18 @@ use Doctrine\ORM\Mapping ar ORM;
 class Producto{
 	/**
 	* @ORM\Id
-	* @ORM\Coumn(type="integer")
+	* @ORM\Column(type="integer")
 	* @ORM\GeneratedValue
 	*/
 	protected $id;
 
 	/**
-	* @ORM\Coumn(type="string". lenght=100)
+	* @ORM\Column(type="string", length=100)
 	*/
 	protected $nombre;
 
 	/**
-	* @ORM\Coumn(type="string". lenght=100)
+	* @ORM\Column(type="string", length=100)
 	*/
 	protected $precio;
 
